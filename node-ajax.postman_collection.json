@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "25ce36d5-ef24-43d9-99fd-c46476739b51",
+		"name": "node-ajax",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "query参数请求",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/query?name=张三",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "张三"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "body参数请求",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\": \"18131239692\",\r\n    \"veriCode\": \"0422\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/body",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"body"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "path参数请求",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/path/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"path",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "formData参数请求",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "名字",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "/C:/Users/Admin/Desktop/微信图片_20210926161016.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/formData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"formData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "参数混合请求",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\": \"18131239692\",\r\n    \"veriCode\": \"0422\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/mixTheRequest/12?name=张三&age=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"mixTheRequest",
+						"12"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "张三"
+						},
+						{
+							"key": "age",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
