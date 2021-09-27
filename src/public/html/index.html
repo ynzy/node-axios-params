@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        margin: 10px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div id="app">
+        <div class="layout">
+            <div class="wrapper-button">
+                <button @click="trunClick(item.clickName)" v-for="(item,index) in buttonList">{{item.name}}</button>
+                <input @change="onUpload" type="file" placeholder="选择图片">
+            </div>
+            <div class="wrapper-data">
+                <pre>
+                    <code >{{result}}</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../javascript/index.js" ></script>
+</body>
+</html>
